@@ -27,3 +27,14 @@
     color: #000000;
     gap: 5px;
   }
+
+
+  .footer {
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    align-content: center;
+    color: #ffffff;
+    font-size: x-small;
+ 
+  }

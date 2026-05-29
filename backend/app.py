@@ -50,9 +50,9 @@ def create_inquiry():
         db.session.rollback()       # Cancel if something breaks
         return jsonify({"error": str(e)}), 500
 
-# This must be all the way against the left wall!
+
 if __name__ == '__main__':
-    # This line looks at your "Inquiry" model above and builds it in Postgres!
+    # This line looks at "Inquiry" model above and builds it in Postgres
     with app.app_context():
         db.create_all()
         

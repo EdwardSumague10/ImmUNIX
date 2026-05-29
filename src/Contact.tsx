@@ -12,7 +12,11 @@ function Contact() {
         <a href="mailto:edward23sumague@gmail.com">edward23sumague@gmail.com</a>
       </div>
 
-      <footer>made by an IT Engineer</footer>
+      <div className="footer">
+        <footer>
+          <p>Built by an IT Engineer // © 2026 ImmUNIX. All rights reserved.</p>
+        </footer>
+      </div>
     </section>
   );
 }
