@@ -1,0 +1,9 @@
+.creator {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10vh;
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
