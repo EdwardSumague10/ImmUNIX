@@ -1,57 +1,59 @@
-import os
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from flask import Flask, request, jsonify
+from flask import Flask, jsonify, request
+from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
-from dotenv import load_dotenv
-
-# Load environment variables
-load_dotenv()
 
 app = Flask(__name__)
-# Allow your frontend to communicate with this backend
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}}) # Adjust port to match your frontend (e.g., 3000 or 5173)
+CORS(app) # Allows your React app to talk to this API
 
-def send_email(name, email, message):
-    sender_email = os.getenv("EMAIL_USER")
-    sender_password = os.getenv("EMAIL_PASS")
-    receiver_email = os.getenv("RECEIVER_EMAIL")
+# Point Flask directly to your brand new local PostgreSQL database
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/immunix'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-    # Create the email structure
-    msg = MIMEMultipart()
-    msg['From'] = sender_email
-    msg['To'] = receiver_email
-    msg['Subject'] = f"New Contact Form Submission from {name}"
+db = SQLAlchemy(app)
 
-    body = f"You received a new message from your portfolio contact form:\n\n" \
-           f"Name: {name}\n" \
-           f"Email: {email}\n\n" \
-           f"Message:\n{message}"
+class Inquiry(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(120), nullable=False)
+    message = db.Column(db.Text, nullable=False)
+
+    # This turns your data into a clean dictionary/JSON format later
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "email": self.email,
+            "message": self.message
+        }
+
+@app.route('/api/inquiries', methods=['POST'])
+def create_inquiry():
+    data = request.get_json()
     
-    msg.attach(MIMEText(body, 'plain'))
-
-    # Connect to Gmail's SMTP server
-    with smtplib.SMTP("smtp.gmail.com", 587) as server:
-        server.starttls() # Secure the connection
-        server.login(sender_email, sender_password)
-        server.send_mail(sender_email, receiver_email, msg.as_string())
-
-@app.route('/api/contact', methods=['POST'])
-def contact():
-    data = request.json
+    # Extract data from the incoming React request
+    name = data.get('name')
+    email = data.get('email')
+    message = data.get('message')
     
-    # Validation
-    if not data or not data.get('name') or not data.get('email') or not data.get('message'):
-        return jsonify({"error": "Missing required fields"}), 400
-
+    # Validation check
+    if not name or not email or not message:
+        return jsonify({"error": "All fields are required"}), 400
+        
+    # Create a new row based on our database blueprint
+    new_inquiry = Inquiry(name=name, email=email, message=message)
+    
     try:
-        send_email(data['name'], data['email'], data['message'])
-        return jsonify({"message": "Email sent successfully!"}), 200
+        db.session.add(new_inquiry) # Stage it
+        db.session.commit()         # Save it permanently to Postgres!
+        return jsonify({"message": "Inquiry submitted successfully!", "data": new_inquiry.to_dict()}), 201
     except Exception as e:
-        print(f"Error sending email: {e}")
-        return jsonify({"error": "Failed to send email. Please try again later."}), 500
+        db.session.rollback()       # Cancel if something breaks
+        return jsonify({"error": str(e)}), 500
 
+# This must be all the way against the left wall!
 if __name__ == '__main__':
-    port = int(os.getenv("PORT", 5000))
-    app.run(debug=True, port=port)
+    # This line looks at your "Inquiry" model above and builds it in Postgres!
+    with app.app_context():
+        db.create_all()
+        
+    app.run(port=5001, debug=True)

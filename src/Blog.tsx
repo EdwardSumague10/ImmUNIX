@@ -77,9 +77,7 @@ function Blog() {
         <div className="osi">
           <p>Let’s take a look at the 7 layers of the OSI model, which explains how data travels across a network step by step.</p>
           </div>
-          <div className="osii">
-          <img src="./images/OSI.png" alt="" />
-          </div>
+          
       
       </div>
     </section>

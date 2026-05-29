@@ -63,12 +63,14 @@
 .head h1 {
   word-spacing: 5px;
   line-height: 31px;
+  position: sticky;
 }
 
 .head p {
   padding-left: 10vh;
   text-align: justify;
   word-spacing: 5px;
+  position: sticky;
 }
 
 .hoverInfo {
@@ -99,18 +101,12 @@
 }
 
 .osi {
+  align-items: center;
   width: 100%;
   color: black;
-  display: flex;
+
   margin-left: 11vh;
 }
 
-.osii {
-  margin-top: 10vh;
-  display: flex;
-  height: 1800px;
-  margin-top: 10vh
-
-}
 
 

@@ -1,10 +1,10 @@
 import './App.css'
 import './index.css'
-import Nav from './components/Nav'
-import Hero from './components/Hero'
-import Blog from './components/Blog'
-import Contact from './components/Contact'
-import Services from './components/Services'
+import Nav from './Nav'
+import Hero from './Hero'
+import Blog from './Blog'
+import Contact from './Contact'
+import Services from './Services'
 
 
 function App() {
