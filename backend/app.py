@@ -17,7 +17,7 @@ class Inquiry(db.Model):
     email = db.Column(db.String(120), nullable=False)
     message = db.Column(db.Text, nullable=False)
 
-    # This turns your data into a clean dictionary/JSON format later
+    # This turns the data into a clean dictionary/JSON format later
     def to_dict(self):
         return {
             "id": self.id,

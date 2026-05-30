@@ -5,7 +5,7 @@
     align-items: center;
     gap: 8px;
     margin: 50px auto;
-    max-width: 650px;
+    max-width: 100%;
     perspective: 1200px; /* Gives the whole pyramid depth */
   }
   

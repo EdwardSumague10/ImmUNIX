@@ -1,12 +1,11 @@
 .blog {
-
+  background-color: black;
   min-height: 100vh;
   width: 100%;
 }
 
 .box-container {
   display: flex;
-  margin-top: 10vh;
   gap: 25px;
   justify-content: center;
   align-items: center;
@@ -100,12 +99,19 @@
   font-weight: bold;
 }
 
-.osi {
-  align-items: center;
+.osi p {
+  margin-top: 0%;
   width: 100%;
   color: black;
+  display: flex;
+  align-items: center;
+}
 
-  margin-left: 11vh;
+.comp {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-decoration: dashed;
 }
 
 

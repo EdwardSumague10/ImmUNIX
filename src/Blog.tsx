@@ -3,7 +3,7 @@ import { FaServer } from "react-icons/fa";
 import { BsFillRouterFill } from "react-icons/bs";
 import { GiFirewall } from "react-icons/gi";
 import { TiFlowSwitch } from "react-icons/ti";
-import Pyramid from './components/Pyramid';
+import Pyramid from "./components/Pyramid";
 
 function Blog() {
   return (
@@ -76,14 +76,14 @@ function Blog() {
           </div>
         </div>
         <div className="osi">
-          <p>Let’s take a look at the 7 layers of the OSI model, which explains how data travels across a network step by step.</p>
+          <p>
+            Let’s take a look at the 7 layers of the OSI model, which explains
+            how data travels across a network step by step.
+          </p>
+        </div>
+        <div className="comp">
           <Pyramid />
-          </div>
-          
-
-          
-          
-      
+        </div>
       </div>
     </section>
   );
