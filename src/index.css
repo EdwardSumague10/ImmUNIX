@@ -32,6 +32,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     --text: #9ca3af;
     --text-h: #f3f4f6;
     --bg: #ffffff;
@@ -91,7 +92,7 @@ section {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 100vh;
+
 
   background-image: 
     linear-gradient(to right, rgba(66, 153, 225, 0.15) 1px, transparent 1px),
@@ -100,21 +101,9 @@ section {
   background-size: 40px 40px; 
 }
 
-@media (max-width: 600px) {
-  .nav,
-  .hero,
-  .blog,
-  .services,
-  .contact {
-    font-size: 12px;
-
-  }
-}
-
 html {
   scroll-padding-top: 80px;
 }
-
 
 
 

@@ -1,4 +1,4 @@
-import React, { useState, FormEvent, ChangeEvent } from "react";
+import React, { useState, ForEvent, ChangeEvent } from "react";
 import "./Contact.css";
 
 // 1. Define types for our form state
