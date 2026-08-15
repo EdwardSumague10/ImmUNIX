@@ -33,7 +33,7 @@ function Contact() {
     console.log("Form Submitted:", formData);
     alert("Message sent! Thanks for getting in touch.");
 
-    // Clear the form fields after successful submission
+   
     setFormData({ name: "", email: "", message: "" });
   };
 

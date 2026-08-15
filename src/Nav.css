@@ -25,8 +25,6 @@
   gap: 50px;
   padding-right: 70vh;
 
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(255, 255, 255);
   list-style: none;
 }
 
@@ -38,7 +36,7 @@
   text-decoration: none;
 }
 
-.icons {
+.icons  {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +46,7 @@
   padding-top: 5px;
 }
 
-.navlinks a::after {
+.navlinks a::before {
   content: "";
   position: absolute;
   left: 0;
@@ -94,10 +92,9 @@
     align-content: center;
     background-color: #000000;
 
-
   }
 
-  /* 3. Scale down the logo size slightly so it fits small phone screens */
+
   .logo a {
     height: 60px;
     display: flex;
@@ -105,23 +102,20 @@
     width: auto;
   }
 
-  /* 4. Reduce gap between menu links so they fit on one line or wrap neatly */
   .navlinks {
+    display: flex;
     gap: 10px;
-    margin-left: 0;
   }
 
-  /* 5. Make font size smaller for mobile reading */
   .navlinks a {
     font-size: 9px;
     padding: 5px 0;
     width: auto;
   }
 
-  /* 6. Reduce icon sizes or gaps slightly */
-  .icons {
-    gap: 15px;
-    margin-left: 0;
+  .icons a {
+    gap: 5px;
+    width: auto;
   }
 }
 

@@ -5,7 +5,7 @@ import { SiPython } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { FaFlutter } from "react-icons/fa6";
 import { FaAws } from "react-icons/fa6";
-<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+
 
 
 function Hero() {

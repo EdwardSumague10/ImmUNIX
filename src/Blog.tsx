@@ -5,6 +5,7 @@ import { GiFirewall } from "react-icons/gi";
 import { TiFlowSwitch } from "react-icons/ti";
 import Pyramid from "./components/Pyramid";
 
+
 function Blog() {
   return (
     <section id="blog">
@@ -80,9 +81,6 @@ function Blog() {
             Let’s take a look at the 7 layers of the OSI model, which explains
             how data travels across a network step by step.
           </p>
-        </div>
-        <div>
-          <h1>rom Elle</h1>
         </div>
         <div className="comp">
           <Pyramid />
