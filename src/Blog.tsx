@@ -11,7 +11,7 @@ function Blog() {
     <section id="blog">
       <div className="box-container">
         <div className="head">
-          <h1>The Anatomy of Modern Networks</h1>
+          <h1>The Anatomy Of Modern Networks</h1>
           <p>
             This section explores how modern digital systems are built through
             the connection of network infrastructure and software technologies,

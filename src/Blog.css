@@ -12,6 +12,35 @@
   margin-top: 4vh;
 }
 
+.head {
+  display: flex;
+  margin-top: 1rem;
+  padding-left: 11vh;
+  padding-right: 11vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  align-items: center;
+  height: 10rem;
+}
+
+.head h1 {
+  display: flex;
+  height: 10rem;
+  word-spacing: 5px;
+  line-height: 31px;
+  position: sticky;
+}
+
+.head p {
+  display: flex;
+  height: 10rem;
+  padding-left: 5vh;
+  text-align: justify;
+
+  word-spacing: 10px;
+  position: sticky;
+}
+
 .box {
   position: relative;
   width: 300px;
@@ -47,29 +76,6 @@
 
 .box:hover img {
   transform: scale(1.1);
-}
-
-.head {
-  display: flex;
-  margin-top: auto;
-  padding-left: 11vh;
-  padding-right: 11vh;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: black;
-  align-items: center;
-}
-
-.head h1 {
-  word-spacing: 5px;
-  line-height: 31px;
-  position: sticky;
-}
-
-.head p {
-  padding-left: 10vh;
-  text-align: justify;
-  word-spacing: 5px;
-  position: sticky;
 }
 
 .hoverInfo {
