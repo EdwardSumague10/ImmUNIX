@@ -30,6 +30,7 @@
 }
 
 .navlinks a {
+  position: relative;
   font-size: small;
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -58,14 +59,14 @@
   background: #00a6ff;
   box-shadow: 0 0 10px #00a6ff;
 
-  transition: width 0.3s ease;
+  transition: width 0.3s ease-in-out;
 }
 
 .navlinks a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -6px;
 
   width: 0%;
   height: 2px;
@@ -106,6 +107,7 @@
   }
 
   .navlinks a {
+    position: relative;
     font-size: 9px;
     padding: 5px 0;
     width: auto;
@@ -121,7 +123,7 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -6px;
 
   width: 0%;
   height: 2px;
@@ -129,7 +131,7 @@
   background: #00a6ff;
   box-shadow: 0 0 10px #00a6ff;
 
-  transition: width 0.3s ease;
+  transition: width 0.3s ease-in-out;
 }
 
 
