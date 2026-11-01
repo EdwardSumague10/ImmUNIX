@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import "./Contact.css";
 
-// 1. Define types for our form state
+
 interface FormData {
   name: string;
   email: string;
@@ -10,14 +10,13 @@ interface FormData {
 }
 
 function Contact() {
-  // 2. Initialize the form state
+
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
 
-  // 3. Handle changing text in input fields dynamically
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -28,7 +27,6 @@ function Contact() {
     }));
   };
 
-  // 4. Handle the form submission
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
@@ -77,14 +75,12 @@ function Contact() {
             />
           </div>
 
-          {/* Changed 'class' to 'className' for React compliance */}
           <button type="submit" className="submit-btn">
             Submit
           </button>
         </form>
       </div>
 
-      {/* Structured the footer layout cleanly */}
       <footer className="footer">
         <p>Built by an IT Engineer. © 2026 ImmUNIX. All rights reserved.</p>
       </footer>
@@ -93,3 +89,5 @@ function Contact() {
 }
 
 export default Contact;
+
+
