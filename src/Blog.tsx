@@ -3,7 +3,7 @@ import { FaServer } from "react-icons/fa";
 import { BsFillRouterFill } from "react-icons/bs";
 import { GiFirewall } from "react-icons/gi";
 import { TiFlowSwitch } from "react-icons/ti";
-import Pyramid from "./components/Pyramid";
+
 
 
 function Blog() {
@@ -83,7 +83,7 @@ function Blog() {
           </p>
         </div>
         <div className="comp">
-          <Pyramid />
+
         </div>
       </div>
     </section>
