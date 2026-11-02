@@ -112,6 +112,13 @@
   }
 }
 
+.photo {
+  display: flex;
+
+  height: 30vh;
+  width: 30vh;
+
+}
 
 .about {
   padding-top: 100vh;

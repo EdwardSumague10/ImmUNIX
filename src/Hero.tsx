@@ -38,6 +38,9 @@ function Hero() {
         <div className="about">
           <h2>Meet the team!</h2>
         </div>
+        <div className="photo">
+        <img src="/images/us.jpeg" alt="piksur" />
+        </div>
     </section>
   );
 }
