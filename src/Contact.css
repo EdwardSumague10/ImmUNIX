@@ -19,15 +19,16 @@
   }
 
 
-/* 2. The Blurry Glass Form Box */
 .form-container {
+  margin-top: 5rem;
+  align-items: center;
   width: 100%;
   max-width: 500px; 
   padding: 40px;
   border-radius: 16px;
   background: rgb(255, 255, 255); 
   
-  /* Blurs whatever is behind this box */
+
   backdrop-filter: blur(15px); 
   -webkit-backdrop-filter: blur(15px); 
   
@@ -43,7 +44,7 @@
   letter-spacing: 1px;
 }
 
-/* 3. Form Fields Styling */
+
 .input-group {
   margin-bottom: 20px;
   margin-right: 30px;

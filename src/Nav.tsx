@@ -2,7 +2,6 @@ import "./Nav.css";
 import { FaLinkedin } from "react-icons/fa";
 import { FaFacebookMessenger } from "react-icons/fa";
 
-
 function Nav() {
   return (
     <nav className="nav">

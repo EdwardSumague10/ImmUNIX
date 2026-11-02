@@ -34,6 +34,10 @@ function Hero() {
       <div className="more">
           <a href="/blog">Discover the Core</a>
         </div>
+
+        <div className="about">
+          <h2>Meet the team!</h2>
+        </div>
     </section>
   );
 }

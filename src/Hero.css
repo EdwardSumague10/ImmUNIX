@@ -1,5 +1,5 @@
 .hero {
-  height: calc(100vh - 80px);
+  min-height: 50vh;
   width: 100%;
   margin-left: 0;
   padding-top: 80px;
@@ -110,4 +110,9 @@
     word-spacing: 45px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+}
+
+
+.about {
+  padding-top: 100vh;
 }

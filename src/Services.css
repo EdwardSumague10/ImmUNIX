@@ -6,8 +6,9 @@
 
 
 .creator {
+    margin-top: 5rem;
+    align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
     color: rgb(0, 0, 0);
     width: 100%;
     display: flex;

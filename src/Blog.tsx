@@ -82,9 +82,6 @@ function Blog() {
             how data travels across a network step by step.
           </p>
         </div>
-        <div className="comp">
-
-        </div>
       </div>
     </section>
   );
