@@ -17,15 +17,11 @@ function Nav() {
         </li>
 
         <li>
-          <a href="/blog">
-            Blog 
-          </a>
+          <a href="/blog">Blog</a>
         </li>
 
         <li>
-          <a href="/services">
-            Services 
-          </a>
+          <a href="/services">Services</a>
         </li>
 
         <li>
