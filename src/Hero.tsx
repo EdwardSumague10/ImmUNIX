@@ -32,7 +32,7 @@ function Hero() {
         </div>
       </div>
       <div className="more">
-          <a href="#blog">Discover the Core</a>
+          <a href="/blog">Discover the Core</a>
         </div>
     </section>
   );

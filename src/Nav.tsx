@@ -7,33 +7,29 @@ function Nav() {
   return (
     <nav className="nav">
       <div className="logo">
-        <a href="#hero">
+        <a href="/hero">
           <img src="/images/ImmUnixWhite.png" alt="logo" />
         </a>
       </div>
       <ul className="navlinks">
         <li>
-          <a href="#hero">
-            Hero 
-          </a>
+          <a href="/hero">Hero</a>
         </li>
 
         <li>
-          <a href="#blog">
+          <a href="/blog">
             Blog 
           </a>
         </li>
 
         <li>
-          <a href="#services">
+          <a href="/services">
             Services 
           </a>
         </li>
 
         <li>
-          <a href="#contact">
-            Contact 
-          </a>
+          <a href="/contact">Contact</a>
         </li>
       </ul>
       <div className="icons">
