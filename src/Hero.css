@@ -60,10 +60,11 @@
 
 .more {
   margin-top: 10vh;
+  margin-left: 11vh;
 }
 
 .more a {
-  margin-left: 11vh;
+
   text-decoration: none;
 
   background: linear-gradient(90deg, #00a6ff, #000000, #00a6ff);
@@ -141,13 +142,10 @@
 
 .more {
   margin-top: -10vh;
-
-
 }
 
 .more a {
   font-size: small;
-
   margin-left: 1vh;
   text-decoration: none;
 
